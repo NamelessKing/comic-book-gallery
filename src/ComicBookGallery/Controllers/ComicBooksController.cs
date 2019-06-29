@@ -8,9 +8,9 @@ namespace ComicBookGallery.Controllers
 {
     public class ComicBooksController : Controller
     {
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "comic book controller";
+            return Content("comic books controller content");
         }
     }
 }
