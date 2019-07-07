@@ -2,7 +2,6 @@
 @model ComicBookGallery.Models.ComicBook
 
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = Model.DisplayText;
 }
 
@@ -34,7 +33,7 @@
     </div>
     <div class="col-md-6">
         <img src="/Images/@Model.CoverImageFileName"
-             alt=@Model.DisplayText class="img-responsive" />
+             alt="@Model.DisplayText" class="img-responsive" />
     </div>
 </div>
 
@@ -42,21 +41,21 @@
 
 
 @*<h1>@Model.SeriesTitle</h1>
-<h2>Issue #@Model.IssueNumber</h2>
+    <h2>Issue #@Model.IssueNumber</h2>
 
-<h5>Description:</h5>
-<div>@Html.Raw(Model.DescriptionHtml)</div>
+    <h5>Description:</h5>
+    <div>@Html.Raw(Model.DescriptionHtml)</div>
 
 
-@if (Model.Artists.Length > 0)
-{
-    <h5>Artists: </h5>
-    <div>
-        <ul>
-            @foreach (var artist in Model.Artists)
-            {
-                <li>@artist.Role: @artist.Name</li>
-            }
-        </ul>
-    </div>
-}*@
+    @if (Model.Artists.Length > 0)
+    {
+        <h5>Artists: </h5>
+        <div>
+            <ul>
+                @foreach (var artist in Model.Artists)
+                {
+                    <li>@artist.Role: @artist.Name</li>
+                }
+            </ul>
+        </div>
+    }*@
